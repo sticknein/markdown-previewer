@@ -29,6 +29,12 @@ export default class App extends React.Component {
   }
 
   render() {
+    const appStyle = {
+      width: '100vw',
+      height: '100vh',
+      backgroundColor: 'teal'
+    }
+
     const inputStyle = {
       width: '400px',
       height: '50vh',
@@ -47,12 +53,12 @@ export default class App extends React.Component {
     };
 
     return (
-      <div className="App">
+      <div className="App" style={appStyle}>
         <div className="container">
           <div className="row mt-4">
             <div className="col text-center">
               <h1>
-                <Badge className="text-align-center" variant="light">
+                <Badge className="text-align-center" variant="secondary">
                   Markdown Previewer
                 </Badge>
               </h1>
@@ -76,7 +82,7 @@ export default class App extends React.Component {
                   onChange={(e) => {
                     this.updateMarkdown(e.target.value)
                   }} 
-                ></textarea>;
+                ></textarea>
               </div>
             </div>
     
